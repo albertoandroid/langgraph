@@ -1,0 +1,17 @@
+langchain
+openai
+python-dotenv
+langchain-openai
+langchain-core
+langchain-community
+tavily-python
+langgraph
+langgraph-prebuilt
+langgraph-sdk
+langgraph-checkpoint-sqlite
+ipython
+langgraph-cli
+langgraph-cli[inmem]
+langchain-tavily
+wikipedia
+trustcall

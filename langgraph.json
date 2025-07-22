@@ -1,0 +1,10 @@
+{
+  "dockerfile_lines": [],
+  "graphs": {
+    "simple_graph": "./module01/graph01.py:graph"
+  },
+  "env": "./.env",
+  "dependencies": [
+    "."
+  ]
+}
