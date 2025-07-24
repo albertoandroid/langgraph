@@ -99,12 +99,13 @@ def extract_tool_info(tool_calls, schema_name="Memory"):
     for call_group in tool_calls:
         for call in call_group:
             if call['name'] == 'PatchDoc':
-                changes.append({
-                    'type': 'update',
-                    'doc_id': call['args']['json_doc_id'],
-                    'planned_edits': call['args']['planned_edits'],
-                    'value': call['args']['patches'][0]['value']
-                })
+                if call['args'].get('patches') and len(call['args']['patches']) > 0:
+                    changes.append({
+                        'type': 'update',
+                        'doc_id': call['args']['json_doc_id'],
+                        'planned_edits': call['args']['planned_edits'],
+                        'value': call['args']['patches'][0]['value']
+                    })
             elif call['name'] == schema_name:
                 changes.append({
                     'type': 'new',
